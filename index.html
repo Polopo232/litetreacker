@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hajusrakenduste Sõnavara Kontroll</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Hajusrakenduste Sõnavara Kontroll</h1>
+<p>Testi oma teadmisi hajusrakenduste (distributed systems) mõistetest!</p>
+
+<!-- Кнопка обновления страницы/перезапуска теста -->
+<button onclick="location.reload()" class="refresh-btn">Värskenda lehte / Uued sõnad</button>
+
+<!-- Таблица из 2 колонок -->
+<table>
+    <thead>
+    <tr>
+        <th>Eesti -> Vene</th>
+        <th>Vene -> Eesti</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <!-- Первая колонка: EE -> RU -->
+        <td>
+            <div class="card">
+                <p>Tõlgi vene keelde: <strong id="est-word">...</strong></p>
+                <input type="text" id="ru-input" placeholder="Kirjuta tõlge...">
+                <button onclick="checkEstToRu()">Kontrolli</button>
+                <p id="ru-result" class="result"></p>
+            </div>
+        </td>
+
+        <!-- Вторая колонка: RU -> EE -->
+        <td>
+            <div class="card">
+                <p>Tõlgi eesti keelde: <strong id="ru-word">...</strong></p>
+                <input type="text" id="est-input" placeholder="Kirjuta tõlge...">
+                <button onclick="checkRuToEst()">Kontrolli</button>
+                <p id="est-result" class="result"></p>
+            </div>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<script src="script.js"></script>
+</body>
+</html>
